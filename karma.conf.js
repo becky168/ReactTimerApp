@@ -25,7 +25,8 @@ module.exports = function (config) {
                                 // go ahead cancel it and set the test to failed
             }
         },
-        webpack: webpackConfig,
+        webpack: webpackConfig, // use webpack information in webpack configuration
+                                // in order to create tests that use require and let us load in in our module
         webpackServer: {
             noInfo: true //禁止webpack在预处理输出日志信息
         }

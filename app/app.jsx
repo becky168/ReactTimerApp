@@ -2,6 +2,8 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var {Route, Router, IndexRoute, hashHistory} = require("react-router");
 var Main = require("Main");
+var Timer = require("Timer");
+var Countdown = require("Countdown");
 
 // require the css that the component need only inside the component
 // Load fundation
@@ -44,10 +46,14 @@ path 是對應 URL 的規則。
 /repos/torvalds 會對應到 /repos/:name 的位置，並將參數傳入 Repos 元件中。
 由 this.props.params.name 取得參數。
 順帶一提，若為查詢參數 /user?q=torvalds 則由 this.props.location.query.q 取得參數。
+
+PS. IndexRoute does not have path
 */
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}>
+            <Route path="countdown" component={Countdown} />
+            <IndexRoute component={Timer} />
         </Route>
     </Router>,
     document.getElementById("app")

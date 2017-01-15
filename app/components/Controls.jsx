@@ -10,6 +10,12 @@ var Controls = React.createClass({
             this.props.onStatusChange(newStatus);
         };
     },
+    // 已掛載的元件收到新的 props 時被觸發。
+    // 在這個方法裡你通常會去比較 this.props 和 nextProps 
+    // 然後再用 this.setState 去改變狀態。
+    // componentWillReceiveProps: function (newProps) {
+    //     console.log("componentWillReceiveProps", newProps.countdownStatus);
+    // },
     render: function () {
         var {countdownStatus} = this.props;
         // You can't use conditional statement in jsx code

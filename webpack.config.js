@@ -63,7 +63,8 @@ module.exports = {
             Timer: "app/components/Timer.jsx",
             Countdown: "app/components/Countdown.jsx",
             Clock: "app/components/Clock.jsx",
-            CountdownForm: "app/components/CountdownForm.jsx"
+            CountdownForm: "app/components/CountdownForm.jsx",
+            Controls: "app/components/Controls.jsx"
         },
         // 如果希望在 require() 時不需要加入副檔名
         // 可以加入一個 resolve.extensions 屬性並告訴 webpack 哪些副檔名是可以省略的。
